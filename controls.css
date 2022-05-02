@@ -1,0 +1,691 @@
+*{
+    background-color: #212121;
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+    font-weight: 400;
+}
+
+/* designing the first column using flex in css */
+.flexbox-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 3px;
+}
+
+.flexbox-item{
+    margin: 10px;
+    border: 3px solid  hsl(36, 80%, 53%);
+    border-radius: 10px;
+}
+
+.flexbox-item-1{
+    margin-top: 29px !important;
+    width: 436px;
+    height: 233px;
+    margin: 10px;
+    border: 3px solid  hsl(36, 80%, 53%);
+    border-radius: 10px;
+}
+.title-1{
+    position: relative;
+    top: 19px;
+}
+
+.motor_logo{
+    position: absolute;
+    margin-left: -5px;
+    width: 50px;
+    margin-top: -11px;
+    height: 50px;
+}
+.motor_logo_text{
+    background: #212121;
+    margin-left: 45px;
+    width: 121px;
+    color: #c24d2c !important;
+    width: 127px;
+    font-family: 'Roboto', sans-serif;
+    display: inline-block;
+    margin-top: -5px;
+    font-size: 25px;
+    position: absolute;
+}
+
+.micro_word{
+    color: white !important;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    background: transparent;
+    margin-left: 10px;
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+/* start of adjusting switch  */
+.big_switch{
+    padding-left: 153px;
+    align-content: flex-end;
+    padding-top: 20px !important;
+}
+
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 61px;
+    height: 25px;
+}
+.slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.3s;
+    border-radius: 34px;
+}
+
+.switch input{display:none;}
+
+.slider:before{
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 9px;
+    bottom: 6.5px;
+    background-color: white;
+    transition: 0.3s;
+    border-radius: 50px;
+}
+
+input:checked + .slider{
+    background-color:hsl(36, 80%, 53%) ;
+}
+input:checked + .slider:before{
+   transform: translateX(32px);
+}
+
+/* grid 2 */
+.flex{
+    margin-top: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.micro_motor-t1{
+    color: white !important;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    background: transparent;
+    margin-left: 10px;
+}
+
+/* editing slider for numbers starting from -255 to 255 */
+.slider2{margin-left:35px;width: 122px;
+}
+
+.value{
+    padding-left: 13px;
+    margin-top: 5px;
+    color: white ;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+}
+
+.slider2 input{
+    margin-top: 11px;
+    height: 8px;
+    width: 100%;
+    -webkit-appearance: none;
+    background: white;
+    border-radius: 25px;
+    box-shadow: inset 0 0 4px rgb(0 0 0 / 20%);
+}
+
+.slider2 input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius:50% ;
+    border: 7px solid hsl(36, 80%, 53%);
+    background: white;
+}
+
+.micro_motor-t1-1{
+    margin-top: 5px;
+}
+
+.v2-1{
+    margin-top: 2px;
+}
+
+.v2-2{
+    margin-top: 2px;
+}
+
+.all_in_t1{
+    margin-top: 10px;
+}
+.v4-2{
+    width: 122px;   
+    margin-left: 52px;
+}
+
+/* designing the T100 speed spinner */
+.container{
+    position: relative;
+    height: 50px;
+    border-radius: 40px;
+    background:hsl(36, 80%, 53%) ;
+    width: 120px;margin-left: 74px;
+    margin-top: 24px;
+
+}
+
+.container .next{
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    width: 12px;
+    height: 12px;
+    border-top: 2px solid #fff;
+    border-left : 2px solid #fff;
+    z-index: 1;
+    transform: translateY(-50%) rotate(135deg);
+    cursor: pointer;
+    opacity: 1;
+    right: 20px;
+    background-color: transparent;
+}
+.container .prev{
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    width: 12px;
+    height: 12px;
+    border-top: 2px solid #fff;
+    border-left : 2px solid #fff;
+    z-index: 1;
+    transform: translateY(-50%) rotate(315deg);
+    cursor: pointer;
+    opacity: 1;
+    left: 20px;
+    background-color: transparent;
+}
+#box span{    
+    background: transparent;
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 46px;
+    color: white;
+    font-size: 24px;
+    user-select: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* justifying the second row  */
+
+.flexbox-container-row{
+    display: flex;
+    flex-direction: column;
+    margin-left: 450px;
+}
+
+.fan-2{
+    width: 60px;height: 60px;margin-top: -18px;margin-left: -12px;
+}
+.rov-2-row-txt{
+    width: 261px;margin-top: -5px;
+}
+
+.adjust_row_1{
+    margin-top: 23px;
+}
+
+.more_height{
+    height: 780px;
+}
+
+.some_more_space{
+    padding-bottom: 150px;
+}
+
+.pigle_max_speed_edit{
+    width: 201px;
+    padding-left: 10px;
+}
+
+/* timer */
+.edit_timer_setting{
+    margin-left: 41px;
+    width: 85px;
+    margin-top: -5px;
+}
+
+.special_size{
+    height: 506px;
+    width: 556px;
+}
+
+.launch_time{
+    display: flex;
+    margin-left: 10px;
+    font-family: 'Roboto', sans-serif;
+    color:#c24d2c;
+}
+.whole_element00{
+    width: 100px;   
+    display: flex;
+}
+.launch_time .add_something{
+    flex-basis: 100px;
+    margin-left: 5px;
+}
+.launch_time span{
+    flex-basis: 100px;
+    margin-left: 5px;
+}
+.launch_time div p{
+    font-size: 60px;
+    margin-bottom: -14px;
+}
+
+/* design what design to choose */
+.column_timer_000{
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    margin-left: 29px !important;
+    color: white !important;
+    margin-top: 16px;
+}
+
+.all_elements_timer{
+    display: flex;
+    flex-direction: row;
+}
+
+.column_timer_00{ 
+    display: flex;
+    flex-direction: row;
+}
+
+.text_timer_00{
+    color: white !important;
+    margin-top: 37px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    margin-left: 10px;
+}
+
+.timer_add_space{
+    margin-left: 33%;
+}
+
+.text_is_timer {
+    color:hsl(36, 80%, 53%) !important;
+    cursor: pointer;
+}
+
+.text_is_Countdown{
+    color:hsl(36, 80%, 53%) !important;
+    cursor: pointer;
+}
+
+.first_item_timer{
+    margin-left: 51px;
+
+}
+
+.big_edit_passed{
+    margin-left: 51px;
+}
+
+/* some edits for controls  */
+.editing_last_items{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+.start{
+    color: white !important;
+    padding: 10px;
+    border-radius: 15%;
+    border: 4px solid #c24d2c;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    margin-left: 10px;
+    margin-top: 45px;
+    cursor: pointer;
+}
+
+input{
+    cursor: pointer;
+}
+
+/* some buttons */
+.sum_add_up_for_buttons{
+    display: flex;
+    padding: 4px;
+    flex-direction: row;
+    z-index: 2;
+    width: 45px;
+    margin-top: -600px;
+    padding-top: 10px;
+    padding-left: 6px;
+    padding-bottom: 10px;
+    margin-left: 530px;
+}
+
+.sum_add_up_for_buttons2{
+    height: 268px;
+    margin: 0 !important;
+}
+
+/* my first buttons */
+.PID_FACTORS{
+    cursor: pointer;
+    font-size: 14px;
+    position: absolute;
+    transform: rotate(90deg);
+    color: #b74128;
+    width: 92px;
+    padding-top: 1px;
+    margin-top: 38px;
+    border: 0px solid #e79a27;
+    border-right: 4px solid #e79a27;
+    font-family: 'Roboto', sans-serif;
+    right: 2px;
+    margin-right: -12px !important;
+}
+
+.add_styles_for_PID_FACTORS{
+    width: 651px;
+    margin-top: -752px;
+    z-index: 55;
+    display: flex;
+    flex-direction: row;
+    margin-left: 823px;
+}
+
+.add_styles_for_PID_FACTORS_flex_item{
+    width: 629px;
+    height: 326px;
+    z-index: 5;
+    margin-top: 418px !important;
+}
+
+.PID_SOME_TEXT_EDIT{
+    margin-top: -3px;
+    padding: 0 !important;
+    margin-left: 26px;
+    background: #212121 !important;
+    width: 203px !important;
+}
+/* glitchy effect */
+
+.content .text{
+    color: var(--clr);
+    font-weight: 700;
+    font-size: 65px;
+    padding: 30px;
+    background: var(--bg);
+    font-size: 24px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    position: absolute;
+    z-index: 2;
+  }
+  
+  .content .text:before,
+  .content .text:after {
+    padding: 30px;
+    color: var(--clr);
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+  }
+  
+  
+  .content .text:before{
+    width: 286px;
+    left: -29px;
+    padding-bottom: 0 !important;
+    top: -30px;
+    text-shadow: -2px 0 #ff008b;
+    animation: glitch-1 5s linear infinite reverse;
+  }
+  
+  .content .text:after{
+    width: 286px;
+    padding-bottom: 0 !important;
+    left: -29px;
+    top: -30px;
+    text-shadow: -2px 0 #00efe4;
+    animation: glitch-2 5s linear infinite reverse;
+  }
+  
+  /* the actual animation  */
+  
+  @keyframes glitch-1 {
+    0% {
+      clip: rect(132px, auto, 101px, 30px);
+    }
+    5% {
+      clip: rect(17px, auto, 94px, 30px);
+    }
+    10% {
+      clip: rect(40px, auto, 66px, 30px);
+    }
+    15% {
+      clip: rect(87px, auto, 82px, 30px);
+    }
+    20% {
+      clip: rect(137px, auto, 61px, 30px);
+    }
+    25% {
+      clip: rect(34px, auto, 14px, 30px);
+    }
+    30% {
+      clip: rect(133px, auto, 74px, 30px);
+    }
+    35% {
+      clip: rect(76px, auto, 107px, 30px);
+    }
+    40% {
+      clip: rect(59px, auto, 130px, 30px);
+    }
+    45% {
+      clip: rect(29px, auto, 84px, 30px);
+    }
+    50% {
+      clip: rect(22px, auto, 67px, 30px);
+    }
+    55% {
+      clip: rect(67px, auto, 62px, 30px);
+    }
+    60% {
+      clip: rect(10px, auto, 105px, 30px);
+    }
+    65% {
+      clip: rect(78px, auto, 115px, 30px);
+    }
+    70% {
+      clip: rect(105px, auto, 13px, 30px);
+    }
+    75% {
+      clip: rect(15px, auto, 75px, 30px);
+    }
+    80% {
+      clip: rect(66px, auto, 39px, 30px);
+    }
+    85% {
+      clip: rect(133px, auto, 73px, 30px);
+    }
+    90% {
+      clip: rect(36px, auto, 128px, 30px);
+    }
+    95% {
+      clip: rect(68px, auto, 103px, 30px);
+    }
+    100% {
+      clip: rect(14px, auto, 100px, 30px);
+    }
+  }
+  
+  @keyframes glitch-2 {
+    0% {
+      clip: rect(129px, auto, 36px, 30px);
+    }
+    5% {
+      clip: rect(36px, auto, 4px, 30px);
+    }
+    10% {
+      clip: rect(85px, auto, 66px, 30px);
+    }
+    15% {
+      clip: rect(91px, auto, 91px, 30px);
+    }
+    20% {
+      clip: rect(148px, auto, 138px, 30px);
+    }
+    25% {
+      clip: rect(38px, auto, 122px, 30px);
+    }
+    30% {
+      clip: rect(69px, auto, 54px, 30px);
+    }
+    35% {
+      clip: rect(98px, auto, 71px, 30px);
+    }
+    40% {
+      clip: rect(146px, auto, 34px, 30px);
+    }
+    45% {
+      clip: rect(134px, auto, 43px, 30px);
+    }
+    50% {
+      clip: rect(102px, auto, 80px, 30px);
+    }
+    55% {
+      clip: rect(119px, auto, 44px, 30px);
+    }
+    60% {
+      clip: rect(106px, auto, 99px, 30px);
+    }
+    65% {
+      clip: rect(141px, auto, 74px, 30px);
+    }
+    70% {
+      clip: rect(20px, auto, 78px, 30px);
+    }
+    75% {
+      clip: rect(133px, auto, 79px, 30px);
+    }
+    80% {
+      clip: rect(78px, auto, 52px, 30px);
+    }
+    85% {
+      clip: rect(35px, auto, 39px, 30px);
+    }
+    90% {
+      clip: rect(67px, auto, 70px, 30px);
+    }
+    95% {
+      clip: rect(71px, auto, 103px, 30px);
+    }
+    100% {
+      clip: rect(83px, auto, 40px, 30px);
+    }
+  }
+
+  /* editing the content */
+  .first_item_PID_EDITING{
+    display: flex;
+    margin-top: 41px;
+    align-items: center;
+    
+}
+
+.font_word_edit{
+    font-size: 19px;
+}
+.font_word_edit2{
+    font-size: 17px;
+}
+
+.row_axis_1{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+.number_axis{
+    font-size: 24px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 10px;
+    margin-top: 17px;
+    background-color: #c24d2c;
+    border-radius: 10%;
+    padding: 5px;
+}
+
+.axis_edit{
+    font-size: 24px;
+}
+
+.axis_1{
+    justify-content: space-around !important;
+    display: flex;
+    margin-top: 39px;
+    align-items: center;
+    flex-direction: row;
+}
+.show{
+    display: block !important;
+}
+.hide{
+    display: none !important;
+}
+.blur{
+    filter: blur(4px);
+}
+
+.no_blur{
+    filter: blur(4px);
+}
+
+.vertical_align{
+  margin-top: 418px !important;
+}
+
+.StopwatchORCountdown{
+  margin-top: 118px;
+    display: flex;
+    font-size: 50px;
+    color: white !important;
+    font-family: 'Roboto', sans-serif;
+    justify-content: center;
+}
+
+.or{
+  color: #fff8d2;
+  margin-left: 94px;
+}
+
+.clicky{
+  cursor: pointer;
+  color: #c0651d;
+}

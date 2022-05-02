@@ -1,0 +1,86 @@
+*{
+    background-color: #212121;
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+}
+
+/* about us page */
+.all-ul-elements{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.team_logo2{
+    position: absolute;
+    margin: 45px 0 0 140px;
+    color:hsl(36, 80%, 53%);
+    font-family: 'Mulish', sans-serif;
+    font-size : 35px;
+    margin-bottom:10px;
+    display: inline;
+    font-weight:600 ;
+}
+
+.some_info_about_Team{
+    margin-top: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color:#fee9d7;
+    margin-left: 50px;
+    text-align:justify;
+    margin-top: 20px;
+}
+.some_info_about_Team2{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color:#fee9d7;
+    margin-left: 50px;
+    text-align:justify;
+}
+.main-purpose1{
+    margin: 10px 0 0 20px;
+    color:hsl(36, 80%, 53%);
+    font-family: 'Mulish', sans-serif;
+    font-size : 25px !important;
+    margin-bottom:10px;
+}
+.main-purpose2{
+    margin: 20px 0 0 20px;
+    color:hsl(36, 80%, 53%);
+    font-family: 'Mulish', sans-serif;
+    font-size : 25px !important;
+    margin-bottom:10px;
+}
+
+.logo{
+    margin: 0 auto;
+    margin-left: 20%;
+}
+.controls-naviagation_page{
+    background-color: hsl(36, 80%, 53%) ;
+    outline: 0 transparent;
+    border: 0px transparent;
+    color: #fee9d7;
+    padding: 15px;
+    border-radius: 10px;
+    margin-left: 42%;
+    margin-top: 120px;
+    font-weight: 600;
+}
+
+.link_navigate:link{
+    color: #fee9d7;
+    text-decoration: none;
+    background-color: transparent;
+}
+.link_navigate:visited{
+    color: #fee9d7;
+    text-decoration: none;
+    background-color: transparent;
+}
+.link_navigate:hover{
+    color: #430d27;
+    text-decoration: none;
+    background-color: transparent;
+}

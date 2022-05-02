@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish&amp;display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="controls.css">
+    <title>ROBO-TECH</title>
+</head>
+<body>
+<!-- first column  -->
+<div>
+
+    
+<div style="display: flex;flex-direction: row;" class="blur_help">
+    <div class="flexbox-container el_1">
+
+        <!-- the title and it will overload the box -->
+
+        <div class="title-1">
+            <img class="motor_logo" src="pictures/icons/motor.png" alt="Motor logo">
+            <div class="motor_logo_text" style="padding-left: 5px;width: 137px;">Micro ROV</div>
+        </div>
+
+        <!-- inside the div -->
+        <div class="flexbox-item flexbox-item-1">
+
+            <!-- first setting -->
+          <div class="flex">
+            <div class="all_in_t1"> 
+                <h2 class="micro_word">Micro: </h2>
+            </div>
+             <!-- A label for switching -->
+             <div class="big_switch">
+                <label class="switch">
+                    <input type="checkbox">
+                        <span class="slider"></span>
+                </label>
+            </div>
+          </div>
+
+            <div class="all_1_items">
+                <!-- grid 2 -->
+            <div class="flex">
+                <h2 class="micro_motor-t1 micro_motor-t1-1">Micro Motor: </h2>
+                <div class="slider2">
+                    <input class="range_for_slide" type="range" min="-255" max="255" value="0">
+                </div>
+                <div class="value" id="value_micro">0</div>
+            </div>
+            <!-- grid 3 -->
+            <div class="flex">
+                <h2 class="micro_motor-t1 v2-1 micro_motor-t1-1 ">Roller Motor:</h2>
+                <div class="slider2 v2-2">
+                    <input class="range_for_slide v2" type="range" min="-255" max="255" value="0">
+                </div>
+                <div class="value v2-3">0</div>
+            </div> 
+            <!-- grid 4 -->
+            <div class="flex">
+                <h2 class="micro_motor-t1 micro_motor-t1-1 v4-1">Arm Motor: </h2>
+                <div class="slider2 v4-2">
+                    <input id="third_range" class="range_for_slide v4-3" type="range" min="-255" max="255" value="0">
+                </div>
+                <div class="value v4-4" id="third_value">0</div>
+            </div> 
+        </div>
+
+    </div>
+
+<!-- second item in first column-->
+    <div class="flexbox-container">
+
+        <!-- the title and it will overload the box -->
+
+        <div class="title-1">
+            <img class="motor_logo" src="pictures/icons/arm.png" alt="Arm logo">
+            <div class="motor_logo_text" style="width:201px;width: 210px;">Arms and Flashes</div>
+        </div>
+
+        <!-- inside the div -->
+        <div class="flexbox-item flexbox-item-1">
+
+            <!-- first setting -->
+            <div class="flex" style="margin-top: 15px;">
+                <div class="all_in_t1"> 
+                    <h2 class="micro_word">Front Camera: </h2>
+                </div>
+                 <!-- A label for switching -->
+                 <div class="big_switch" style="margin-left: -94px;">
+                    <label class="switch">
+                        <input type="checkbox">
+                            <span class="slider"></span>
+                    </label>
+                </div>
+              </div>
+              <!-- second setting -->
+              <div class="flex" style="margin-top: 15px;">
+                <div class="all_in_t1" style="margin-top: -14px;"> 
+                    <h2 class="micro_word">Eel Trap Force: </h2>
+                </div>
+                 <!-- A label for switching -->
+                 <div class="big_switch" style="margin-top: -14px;margin-left: -102px;">
+                    <label class="switch">
+                        <input type="checkbox">
+                            <span class="slider"></span>
+                    </label>
+                </div>
+              </div>
+    
+    </div>
+<!-- third item in the first column -->
+<div class="flexbox-container">
+
+    <!-- the title and it will overload the box -->
+
+    <div class="title-1">
+        <img class="motor_logo" style="height: 45px;width: 45px;" src="pictures/icons/fan.png" alt="Fan-1 logo">
+        <div class="motor_logo_text" style="width:201px;width: 210px;padding-left: 7px;margin-left: 40px;">T100 Max speed</div>
+    </div>
+
+    <!-- inside the div -->
+    <div class="flexbox-item flexbox-item-1">
+
+        <!-- first setting -->
+        <div class="flex" style="margin-top: 59px;margin-left: 15%;">
+            <div class="all_in_t1"> 
+                <h2 class="micro_word">Speed: </h2>
+            </div>
+             <!-- A label for switching -->
+             
+          <div class="container">
+              <div class="next"></div>
+              <div class="prev"></div>
+              <div id="box" style="margin-top: 3px;">
+                  <span id="numy">0</span>
+              </div>
+          </div>
+          </div>
+</div>
+
+</div></div></div>
+
+<!-- second element in a row with one large column -->
+<div class="flexbox-container el_2">
+
+    <!-- the title and it will overload the box -->
+
+    <div class="title-1">
+        <img class="motor_logo fan-2" src="pictures/icons/fan-512.png" alt="Fan-2 logo">
+        <div class="motor_logo_text rov-2-row-txt" style="margin-left: 47px;">ROV Propulsion Motor</div>
+    </div>
+
+    <!-- inside the div -->
+    <div class="flexbox-item flexbox-item-1 more_height">
+
+        <!-- first setting -->
+
+        <div class="first_element_00">
+            <div class="all_1_items adjust_row_1" style="padding-top: 72px;">
+                <div class="flex">
+                    <!-- Front Left Pilge -->
+                    <h2 class="micro_motor-t1 micro_motor-t1-1">Front Left Pilge: </h2>
+                    <div class="slider2">
+                        <input id="s3-1" class="range_for_slide" type="range" min="-255" max="255" value="0">
+                    </div>
+                    <div id="s3-v1" class="value">0</div>
+                </div>
+        
+                <!-- second setting  -->
+        
+                <div class="flex">
+                    <!-- Front- Right Pilge -->
+        
+                    <h2 class="micro_motor-t1 v2-1 micro_motor-t1-1 ">Front- Right Pilge:</h2>
+                    <div class="slider2 v2-2">
+                        <input id="s3-2" class="range_for_slide v2" type="range" style="margin-top: -1px;
+                        margin-left: -21px;" min="-255" max="255" value="0">
+                    </div>
+                    <div id="s3-v2" class="value v2-3" style="margin-left: -21px;">0</div>
+                </div> 
+        </div>
+
+<!-- some space between the divs -->
+        <div class="some_more_space"></div>
+        <div class="flex">
+            <!-- Front Left Pilge -->
+            <h2 class="micro_motor-t1 micro_motor-t1-1">Back Left Pilge: </h2>
+            <div class="slider2">
+                <input id="s3-3" class="range_for_slide" type="range" min="-255" max="255" value="0">
+            </div>
+            <div id="s3-v3" class="value">0</div>
+        </div>
+
+        <!-- second setting  -->
+
+        <div class="flex">
+            <!-- Front- Right Pilge -->
+
+            <h2 class="micro_motor-t1 v2-1 micro_motor-t1-1 ">Back- Right Pilge:</h2>
+            <div class="slider2 v2-2">
+                <input id="s3-4" class="range_for_slide v2" type="range" style="margin-top: -1px;
+                margin-left: -21px;" min="-255" max="255" value="0">
+            </div>
+            <div id="s3-v4" class="value v2-3" style="margin-left: -21px;">0</div>
+        </div> 
+
+<!-- some space between the divs -->
+<div class="some_more_space"></div>
+<div class="flex">
+    <!-- Front Left Pilge -->
+    <h2 class="micro_motor-t1 micro_motor-t1-1">Front T200: </h2>
+    <div class="slider2">
+        <input id="s3-5" class="range_for_slide" style="margin-left: 44px;" type="range" min="-255" max="255" value="0">
+    </div>
+    <div id="s3-v5" class="value" style="    margin-left: 44px;">0</div>
+</div>
+
+<!-- second setting  -->
+
+<div class="flex">
+    <!-- Front- Right Pilge -->
+
+    <h2 class="micro_motor-t1 v2-1 micro_motor-t1-1 ">Back T200:</h2>
+    <div class="slider2 v2-2" style="margin-left: 38px;">
+        <input id="s3-6" class="range_for_slide v2" type="range" style="margin-top: -1px;
+        margin-left: 44px;" min="-255" max="255" value="0">
+    </div>
+    <div id="s3-v6" class="value v2-3" style="margin-left: 44px;">0</div>
+</div> 
+    </div>
+
+</div>
+    
+
+</div>
+<div class="flexbox-container el_3">
+    <div class="title-1">
+        <img class="motor_logo" style="height: 45px;width: 45px;" src="pictures/icons/fan.png" alt="Fan logo">
+        <div class="motor_logo_text pigle_max_speed_edit" style="margin-left: 40px;">Pilge Max Speed</div>
+    </div>
+    <div class="flexbox-item flexbox-item-1" style="width: 558px;">
+    
+        <!-- first setting -->
+        <div class="flex" style="margin-top: 53px;margin-left: 21%;">
+            <div class="all_in_t1"> 
+                <h2 class="micro_word">Speed: </h2>
+            </div>
+             <!-- A label for switching -->
+             
+          <div class="container">
+              <div class="next next-1"></div>
+              <div class="prev prev-1"></div>
+              <div id="box" style="margin-top: 3px;color:white;">
+                  <span id="numy2">0</span>
+              </div>
+          </div>
+          </div>
+    </div>
+
+<!-- Timer (Last item ) -->
+<div class="flexbox-container" >
+    <div class="title-1">
+        <img class="motor_logo" src="pictures/icons/clock.png" alt="Timer logo" style="margin-left: -9px;">
+        <div class="motor_logo_text pigle_max_speed_edit edit_timer_setting">Timer</div>
+    </div>
+        <div class="first_stopwatch_control">
+            <div class="flexbox-item flexbox-item-1 special_size" style="width: 558px;">
+                <div class="all_elements_timer  hide" id="stopwatch_1">
+                    <div class="column_timer_000 hide" id="stopwatch_2">
+                        <span class="text_is_timer">Switch to <span id="countDown_switch" style="text-decoration:underline;text-decoration-color: #c24d2c;">Countdown</span>?</div>
+                    </div>
+                
+            <div class="column_timer_00 hide" id="stopwatch_3" style="margin-left: 135px;">
+                    
+                <div class="column_timer_00" style="margin-left: 32px;margin-top: 55px;">
+                    
+                <div class="stopwatch" style="margin-top: 51px;">
+                <h1 id="display" style="display: flex;font-family: 'Roboto', sans-serif;color: white;font-size: 50px;margin-bottom: 24px;">00:00:00</h1>
+                <div style="display: flex;font-family: 'Roboto', sans-serif;color: #e79a27;font-size: 17px;margin-left: -6px;margin-top: -20px;">
+                    <span style="margin-left: 10px;">Hours</span>
+                    <span style="margin-left: 10px;">Minutes</span>
+                    <span style="margin-left: 10px;">Seconds</span>
+            
+    </div>
+                </div>
+            </div>
+    
+            
+        
+    </div>
+        <div class="editing_last_items hide" id="stopwatch_4" style="margin-top: 61px;">
+            <div class="start" id="handler" onclick="startStop()">Start</div>
+            <div onclick="Reset()" class=" start " id="reset">Reset</div>
+        </div>
+
+        <!-- My stopwatch or Countdown! -->
+<div class="StopwatchORCountdown">
+    <div class="content_stopwtach_or_Countdown">
+        <div class="clicky" id="Countdown">Countdown </div>
+         <br>
+          <div class="or">or</div>
+           <br>
+        <span class="clicky" id="stopwatch">Stopwatch</span>
+    </div>
+</div>
+
+
+<div class="countdown hide">
+    <!-- inputs -->
+    <div class="column_timer_000" id="stopwatch_2">
+        <div class="text_is_timer">Switch to <span id="stopwatch_switch" style="text-decoration:underline;text-decoration-color: #c24d2c;">Stopwatch</span>?</div>
+    </div>
+<div class="column_timer_00 " id="stopwatch_3" style="margin-left: 169px;">
+                    
+    <div class="column_timer_00" style="margin-left: 32px;margin-top: 20px;">
+        
+    <div class="stopwatch" style="margin-top: 51px;">
+    <h1 id="display_2" style="display: flex;font-family: 'Roboto', sans-serif;color: white;font-size: 50px;margin-bottom: 24px"><span id="no_1">00</span>:<span id="no_2">00</span></h1>
+    <div style="display: flex;font-family: 'Roboto', sans-serif;color: #e79a27;font-size: 17px;margin-left: -6px;margin-top: -20px;">
+        <span style="margin-left: 10px;">Minutes</span>
+        <span style="margin-left: 10px;">Seconds</span>
+
+</div>
+    </div>
+</div>
+
+
+</div>
+
+<div class="input_management" style="margin-top: 45px;">
+    <div class="flex" style="justify-content: center;">
+        <!-- Front Left Pilge -->
+        <h2 class="micro_motor-t1 micro_motor-t1-1">Minutes: </h2>
+        <div class="slider2">
+            <input id="s4-1" class="range_for_slide range_1" style="margin-left: 44px;" type="range" min="0" max="60" value="0">
+        </div>
+        <div class="value range_1_value" id="s4-v1" style="margin-left: 44px;">0</div>
+    </div>
+
+    <div class="flex" style="justify-content: center;margin-top: 15px;">
+        <!-- Front Left Pilge -->
+        <h2 class="micro_motor-t1 micro_motor-t1-1">Seconds: </h2>
+        <div class="slider2">
+            <input id="s4-2" class="range_for_slide range_2 " style="margin-left: 44px;" type="range" min="0" max="60" value="0">
+        </div>
+        <div class="value range_2_value" id="s4-v2" style="margin-left: 44px;">0</div>
+    </div>
+</div>
+
+<!-- start and reset -->
+<div class="editing_last_items " id="stopwatch_4" >
+<div class="start" id="handler_2">Start</div>
+<div  class=" start " id="reset_2">Reset</div>
+</div>
+
+<!-- end -->
+</div>
+
+
+<!-- start and reset -->
+<div class="editing_last_items hide" id="stopwatch_4" style="margin-top: 61px;">
+    <div class="start" id="handler" onclick="startStop()">Start</div>
+    <div onclick="Reset()" class=" start " id="reset">Reset</div>
+</div>
+
+    </div>
+        </div>
+
+        
+
+</div>
+
+</div></div>
+<div class="flexbox-container sum_add_up_for_buttons" style="margin-left: 1472px !important;">
+    <div class="flexbox-item flexbox-item-1 sum_add_up_for_buttons2" style="width: 46px;z-index: 5;">
+        <!-- my buttons -->
+        <button class="PID_FACTORS" id="PID_FACTORS">PID Factors</button>
+        <button class="PID_FACTORS" style="margin-top: 130px;" id="Buttons">Buttons</button>
+        <button class="PID_FACTORS add_Axis_style" style="background: transparent;margin-top: 217px !important;border:0 solid transparent;/* margin-right: -19px !important; *//* right: 0px; */" id="Axis">Axis</button>
+    </div>
+</div>
+
+<div class="first hide" id="first_show" style="background: transparent;">
+   <div class="num_111">
+    <div class="flexbox-container  add_styles_for_PID_FACTORS " style="filter:blur(0px);background: transparent;">
+        <div class="flexbox-item flexbox-item-1 add_styles_for_PID_FACTORS_flex_item " style="margin-top: 418px !important;">
+            <!-- content -->
+            <div class="title-1" style="margin-top: -29px;">
+                <img class="motor_logo" style="height: 45px;margin-left: -19px;margin-bottom: 15px;width: 45px;" src="pictures/icons/line-graph.png" alt="Fan logo">
+                <!-- <div class="motor_logo_text pigle_max_speed_edit" ">Pilge Max Speed</div> -->
+                <div class="content" style="padding: 0 !important;width: 48px;color: white !important;">
+                    <h2 class="text motor_logo_text pigle_max_speed_edit PID_SOME_TEXT_EDIT " data-text="PID Factors">
+                        PID Factors
+                    </h2>
+                 </div>
+            </div>
+            <div class="first_item_PID_EDITING">
+                <div class="all_in_t1" style="position: relative;"> 
+                    <h2 class="micro_word">1. P-const: </h2>
+                </div>
+                 <!-- A label for switching -->
+                 
+              <div class="container">
+                  <div class="next el1_ne0"></div>
+                  <div class="prev el1_ne1"></div>
+                  <div id="box" style="margin-top: 3px;">
+                      <span id="el1_ne2">0</span>
+                  </div>
+              </div>
+            </div>
+            <div class="first_item_PID_EDITING" style="    margin: 0;">
+                <div class="all_in_t1" style="position: relative;"> 
+                    <h2 class="micro_word">2. L-const: </h2>
+                </div>
+                 <!-- A label for switching -->
+                 
+              <div class="container">
+                  <div class="next el2_ne0"></div>
+                  <div class="prev el2_ne1"></div>
+                  <div id="box" style="margin-top: 3px;">
+                      <span id="el2_ne2">0</span>
+                  </div>
+              </div>
+            </div>
+            <div class="first_item_PID_EDITING" style="    margin: 0;">
+                <div class="all_in_t1" style="position: relative;"> 
+                    <h2 class="micro_word">3. D-const: </h2>
+                </div>
+                 <!-- A label for switching -->
+                 
+              <div class="container">
+                  <div class="next el3_ne0"></div>
+                  <div class="prev el3_ne1"></div>
+                  <div id="box" style="margin-top: 3px;">
+                      <span id="el3_ne3">0</span>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </div>
+   </div>
+</div>
+
+<!-- second item -->
+<div class="second hide" id="second_show">
+   <div class="num_222">
+    <div class="flexbox-container  add_styles_for_PID_FACTORS">
+        <div class="flexbox-item flexbox-item-1 add_styles_for_PID_FACTORS_flex_item ">
+            <!-- content -->
+            <div class="title-1" style="margin-top: -29px;">
+                <img class="motor_logo" style="height: 45px;margin-left: -19px;margin-bottom: 15px;width: 45px;background: transparent !important;" src="pictures/icons/button.png" alt="Fan logo">
+                <!-- <div class="motor_logo_text pigle_max_speed_edit" ">Pilge Max Speed</div> -->
+                <div class="content" style="padding: 0 !important;width: 48px;color: white !important;">
+                    <h2 class="text motor_logo_text pigle_max_speed_edit PID_SOME_TEXT_EDIT edit_befor_after_sizes" data-text="Button" style="    width: 75px;
+                    margin-left: 55px;">
+                        Button
+                    </h2>
+                 </div>
+            </div>
+    <!-- buttons elements in button element -- > display number and text besides it-->
+    <div class="big-element-allign-axis" style="display: flex;margin-top: 39px;align-items: center;flex-direction: row;">
+        <!-- first button -->
+        <div class="flex">
+            <div class="all_in_t1"> 
+                <h2 class="micro_word font_word_edit2">Button 01: </h2>
+            </div>
+             <!-- A label for switching -->
+             <div class="big_switch" style="padding-left: 42px;">
+                <label class="switch">
+                    <input type="checkbox">
+                        <span class="slider"></span>
+                </label>
+            </div>
+          </div>
+          <!-- first button -->
+          <div class="flex" style="display: flex;flex-direction: row;margin-left: 18px;">
+            <div class="all_in_t1"> 
+                <h2 class="micro_word font_word_edit2">Button 02: </h2>
+            </div>
+             <!-- A label for switching -->
+             <div class="big_switch" style="padding-left: 42px;">
+                <label class="switch">
+                    <input type="checkbox">
+                        <span class="slider"></span>
+                </label>
+            </div>
+          </div>
+          <!-- first button -->
+          <div class="flex" style="display: flex;flex-direction: row;margin-left: 18px;">
+            <div class="all_in_t1"> 
+                <h2 class="micro_word font_word_edit2">Button 03: </h2>
+            </div>
+             <!-- A label for switching -->
+             <div class="big_switch" style="padding-left: 42px;">
+                <label class="switch">
+                    <input type="checkbox">
+                        <span class="slider"></span>
+                </label>
+            </div>
+          </div>
+    </div>
+    
+    <!-- second row -->
+    <div class="big-element-allign-axis" style="display: flex;margin-top: -2px;align-items: center;flex-direction: row;">
+        <!-- first button -->
+        <div class="flex">
+            <div class="all_in_t1"> 
+                <h2 class="micro_word font_word_edit2">Button 03: </h2>
+            </div>
+             <!-- A label for switching -->
+             <div class="big_switch" style="padding-left: 42px;">
+                <label class="switch">
+                    <input type="checkbox">
+                        <span class="slider"></span>
+                </label>
+            </div>
+          </div>
+          <!-- first button -->
+          <div class="flex" style="display: flex;flex-direction: row;margin-left: 18px;">
+            <div class="all_in_t1"> 
+                <h2 class="micro_word font_word_edit2">Button 04: </h2>
+            </div>
+             <!-- A label for switching -->
+             <div class="big_switch" style="padding-left: 42px;">
+                <label class="switch">
+                    <input type="checkbox">
+                        <span class="slider"></span>
+                </label>
+            </div>
+          </div>
+          <!-- first button -->
+          <div class="flex" style="display: flex;flex-direction: row;margin-left: 18px;">
+            <div class="all_in_t1"> 
+                <h2 class="micro_word font_word_edit2">Button 05: </h2>
+            </div>
+             <!-- A label for switching -->
+             <div class="big_switch" style="padding-left: 42px;">
+                <label class="switch">
+                    <input type="checkbox">
+                        <span class="slider"></span>
+                </label>
+            </div>
+          </div>
+    </div>
+    
+    <!-- third row -->
+    <div class="big-element-allign-axis" style="display: flex;margin-top: -2px;align-items: center;flex-direction: row;">
+        <!-- first button -->
+        <div class="flex">
+            <div class="all_in_t1"> 
+                <h2 class="micro_word font_word_edit2">Button 06: </h2>
+            </div>
+             <!-- A label for switching -->
+             <div class="big_switch" style="padding-left: 42px;">
+                <label class="switch">
+                    <input type="checkbox">
+                        <span class="slider"></span>
+                </label>
+            </div>
+          </div>
+          <!-- first button -->
+          <div class="flex" style="display: flex;flex-direction: row;margin-left: 18px;">
+            <div class="all_in_t1"> 
+                <h2 class="micro_word font_word_edit2">Button 07: </h2>
+            </div>
+             <!-- A label for switching -->
+             <div class="big_switch" style="padding-left: 42px;">
+                <label class="switch">
+                    <input type="checkbox">
+                        <span class="slider"></span>
+                </label>
+            </div>
+          </div>
+          <!-- first button -->
+          <div class="flex" style="display: flex;flex-direction: row;margin-left: 18px;">
+            <div class="all_in_t1"> 
+                <h2 class="micro_word font_word_edit2">Button 08: </h2>
+            </div>
+             <!-- A label for switching -->
+             <div class="big_switch" style="padding-left: 42px;">
+                <label class="switch">
+                    <input type="checkbox">
+                        <span class="slider"></span>
+                </label>
+            </div>
+          </div>
+    </div>
+    
+    <!-- fourth row -->
+    <div class="big-element-allign-axis" style="display: flex;margin-top: -2px;align-items: center;flex-direction: row;">
+        <!-- first button -->
+        <div class="flex">
+            <div class="all_in_t1"> 
+                <h2 class="micro_word font_word_edit2">Button 09: </h2>
+            </div>
+             <!-- A label for switching -->
+             <div class="big_switch" style="padding-left: 42px;">
+                <label class="switch">
+                    <input type="checkbox">
+                        <span class="slider"></span>
+                </label>
+            </div>
+          </div>
+          <!-- first button -->
+          <div class="flex" style="display: flex;flex-direction: row;margin-left: 18px;">
+            <div class="all_in_t1"> 
+                <h2 class="micro_word font_word_edit2">Button 10: </h2>
+            </div>
+             <!-- A label for switching -->
+             <div class="big_switch" style="padding-left: 42px;">
+                <label class="switch">
+                    <input type="checkbox">
+                        <span class="slider"></span>
+                </label>
+            </div>
+          </div>
+          <!-- first button -->
+          <div class="flex" style="display: flex;flex-direction: row;margin-left: 18px;">
+            <div class="all_in_t1"> 
+                <h2 class="micro_word font_word_edit2">Button 11: </h2>
+            </div>
+             <!-- A label for switching -->
+             <div class="big_switch" style="padding-left: 42px;">
+                <label class="switch">
+                    <input type="checkbox">
+                        <span class="slider"></span>
+                </label>
+            </div>
+          </div>
+    </div>
+    
+    <!-- fifth row -->
+    <div class="big-element-allign-axis" style="display: flex;margin-top: -2px;align-items: center;flex-direction: row;">
+        <!-- first button -->
+        <div class="flex">
+            <div class="all_in_t1"> 
+                <h2 class="micro_word font_word_edit2">Button 12: </h2>
+            </div>
+             <!-- A label for switching -->
+             <div class="big_switch" style="padding-left: 42px;">
+                <label class="switch">
+                    <input type="checkbox">
+                        <span class="slider"></span>
+                </label>
+            </div>
+          </div>
+          <!-- first button -->
+          <div class="flex" style="display: flex;flex-direction: row;margin-left: 18px;">
+            <div class="all_in_t1"> 
+                <h2 class="micro_word font_word_edit2">Button 13: </h2>
+            </div>
+             <!-- A label for switching -->
+             <div class="big_switch" style="padding-left: 42px;">
+                <label class="switch">
+                    <input type="checkbox">
+                        <span class="slider"></span>
+                </label>
+            </div>
+          </div>
+          <!-- first button -->
+          
+    </div>
+    
+    
+        </div>
+    </div>
+   </div>
+</div>
+
+<!-- third item -->
+<div class="third hide" id="third_show">
+   <div class="num_333">
+    <div class="flexbox-container add_styles_for_PID_FACTORS">
+        <div class="flexbox-item flexbox-item-1 add_styles_for_PID_FACTORS_flex_item ">
+            <!-- content -->
+            <div class="title-1" style="margin-top: -29px;">
+                <img class="motor_logo" style="height: 45px;margin-left: -19px;margin-bottom: 15px;width: 45px;background: transparent !important;" src="pictures/icons/joystick.png" alt="Fan logo">
+                <!-- <div class="motor_logo_text pigle_max_speed_edit" ">Pilge Max Speed</div> -->
+                <div class="content" style="padding: 0 !important;width: 48px;color: white !important;">
+                    <h2 class="text motor_logo_text pigle_max_speed_edit PID_SOME_TEXT_EDIT edit_befor_after_sizes" data-text="Axis" style="    width: 64px !important;
+                    margin-left: 55px;">
+                        Axis
+                    </h2>
+                 </div>
+            </div>
+    <!-- buttons elements in button element -- > display number and text besides it-->
+    <div class="big-element-allign-axis axis_1">
+        <!-- first button -->
+        <div class="flex">
+            <div class="all_in_t1"> 
+                <h2 class="micro_word font_word_edit2 axis_edit">Axis_1: </h2>
+            </div>
+             <!-- A label for switching -->
+             <div class="number_axis">0</div>
+          </div>
+          <!-- first button -->
+          <div class="flex">
+            <div class="all_in_t1"> 
+                <h2 class="micro_word font_word_edit2 axis_edit">Axis_2: </h2>
+            </div>
+             <!-- A label for switching -->
+             <div class="number_axis">0</div>
+          </div>
+          <!-- first button -->
+          <div class="flex">
+            <div class="all_in_t1"> 
+                <h2 class="micro_word font_word_edit2 axis_edit">Axis_3: </h2>
+            </div>
+             <!-- A label for switching -->
+             <div class="number_axis">0</div>
+          </div>
+    </div>
+    
+    <!-- second row -->
+    <div class="big-element-allign-axis axis_1">
+        <!-- first button -->
+        <div class="flex">
+            <div class="all_in_t1"> 
+                <h2 class="micro_word font_word_edit2 axis_edit">Axis_4: </h2>
+            </div>
+             <!-- A label for switching -->
+             <div class="number_axis">0</div>
+          </div>
+          <!-- first button -->
+          <div class="flex">
+            <div class="all_in_t1"> 
+                <h2 class="micro_word font_word_edit2 axis_edit">Axis_5: </h2>
+            </div>
+             <!-- A label for switching -->
+             <div class="number_axis">0</div>
+          </div>
+          <!-- first button -->
+          <div class="flex">
+            <div class="all_in_t1"> 
+                <h2 class="micro_word font_word_edit2 axis_edit">Axis_6: </h2>
+            </div>
+             <!-- A label for switching -->
+             <div class="number_axis">0</div>
+          </div>
+    </div>
+    
+    <!-- third row -->
+    <div class="big-element-allign-axis axis_1" style="justify-content: normal !important;">
+        <!-- first button -->
+        <div class="flex" style="margin-left: 43px !important">
+            <div class="all_in_t1"> 
+                <h2 class="micro_word font_word_edit2 axis_edit">Axis_7: </h2>
+            </div>
+             <!-- A label for switching -->
+             <div class="number_axis">0</div>
+          </div>
+          <!-- first button -->
+          <div class="flex">
+            <div class="all_in_t1"> 
+                <h2 class="micro_word font_word_edit2 axis_edit" style="margin-left: 95px;">Axis_8: </h2>
+            </div>
+             <!-- A label for switching -->
+             <div class="number_axis">0</div>
+          </div>
+   </div>
+    </div>
+    
+    
+    
+        </div>
+    </div>
+</div>
+
+</div>
+
+<script src="app.js"></script>
+</body></html>
