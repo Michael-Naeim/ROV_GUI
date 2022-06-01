@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+message motors {
+  repeated uint32 motorsSpeed = 1;
+  repeated uint32 motorsDirections = 2;
+  repeated uint32 servos = 3;
+  repeated uint32 dcMotors = 4;
+  uint32 solenoidDirection = 5;
+}
+
+message Sensor {
+  repeated float imu = 1 ;
+}

@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish&amp;display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="controls.css">
+    <title>ROBO-TECH</title>
+    <style>
+
+    #gamepads>* {
+      padding: 1em;
+      margin: 10px 5px 0 0;
+    }
+
+    #gamepads pre {
+      white-space: pre-wrap;
+    }
+
+    .head {
+      display: flex;
+    }
+
+    .head .id {
+      flex: 1 1 auto;
+    }
+
+    .head .index,
+    .head .id {
+      display: inline-block;
+      background: #222;
+      padding: 0.5em;
+    }
+
+    .info .label {
+      width: 7em;
+      display: inline-block;
+    }
+
+    .info>div {
+      padding: 0.25em;
+      background: #222;
+      margin: 0.25em 0.25em 0 0;
+    }
+
+    .inputs {
+      display: flex;
+    }
+
+    .axes {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .svg text {
+      color: #CCC;
+      font-family: monospace;
+    }
+
+    .axes svg text {
+      font-size: 0.6px;
+    }
+
+    .buttons svg text {
+      font-size: 1.2px;
+    }
+
+    .axes>div,
+    .buttons>div {
+      display: inline-block;
+      background: #222;
+    }
+
+    .axes>div {
+      margin: 2px 5px 0 0;
+    }
+
+    .buttons>div {
+      margin: 2px 2px 0 0;
+    }
+</style>
+</head>
+
+<body>
+    <!-- first column  -->
+    <div>
+
+
+        <div style="display: flex;flex-direction: row;" class="blur_help" id="bluring">
+            <div class="flexbox-container el_1">
+
+                <!-- the title and it will overload the box -->
+
+                <div class="title-1">
+                    <img class="motor_logo" src="pictures/icons/motor.png" alt="Motor logo">
+                    <div class="motor_logo_text" style="padding-left: 5px;width: 78px;">Float </div>
+                </div>
+
+                <!-- inside the div -->
+                <div class="flexbox-item flexbox-item-1">
+
+                    <!-- first setting -->
+                    <div class="flex">
+                        <div class="all_in_t1">
+                            <h2 class="micro_word">Micro: </h2>
+                        </div>
+                        <!-- A label for switching -->
+                        <div class="big_switch">
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="all_1_items">
+                        <!-- grid 2 -->
+                        <div class="flex">
+                            <h2 class="micro_motor-t1 micro_motor-t1-1">Micro Motor: </h2>
+                            <div class="slider2">
+                                <input class="range_for_slide" type="range" min="-255" max="255" value="0">
+                            </div>
+                            <div class="value" id="value_micro">0</div>
+                        </div>
+                        <!-- grid 3 -->
+                        <div class="flex">
+                            <h2 class="micro_motor-t1 v2-1 micro_motor-t1-1 ">Roller Motor:</h2>
+                            <div class="slider2 v2-2">
+                                <input class="range_for_slide v2" type="range" min="-255" max="255" value="0">
+                            </div>
+                            <div class="value v2-3">0</div>
+                        </div>
+                        <!-- grid 4 -->
+                        <div class="flex">
+                            <h2 class="micro_motor-t1 micro_motor-t1-1 v4-1">Arm Motor: </h2>
+                            <div class="slider2 v4-2">
+                                <input id="third_range" class="range_for_slide v4-3" type="range" min="-255" max="255" value="0">
+                            </div>
+                            <div class="value v4-4" id="third_value">0</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- second item in first column-->
+                <div class="flexbox-container">
+
+                    <!-- the title and it will overload the box -->
+
+                    <div class="title-1">
+                        <img class="motor_logo" src="pictures/icons/arm.png" alt="Arm logo">
+                        <div class="motor_logo_text" style="width:201px;width: 210px;">Arms and Flashes</div>
+                    </div>
+
+                    <!-- inside the div -->
+                    <div class="flexbox-item flexbox-item-1">
+
+                        <!-- first setting -->
+                        <div class="flex" style="margin-top: 44px;">
+                            <div class="all_in_t1">
+                                <h2 class="micro_word">Front Camera: </h2>
+                            </div>
+                            <!-- A label for switching -->
+                            <div class="big_switch" style="margin-left: -94px;">
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <!-- second setting -->
+                        <div class="flex" style="margin-top: 15px;">
+                            <div class="all_in_t1" style="margin-top: -14px;">
+                                <h2 class="micro_word">Eel Trap Force: </h2>
+                            </div>
+                            <!-- A label for switching -->
+                            <div class="big_switch" style="margin-top: -14px;margin-left: -102px;">
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- third item in the first column -->
+                    <div class="flexbox-container">
+
+                        <!-- the title and it will overload the box -->
+
+                        <div class="title-1">
+                            <img class="motor_logo" style="height: 45px;width: 45px;" src="pictures/icons/fan.png" alt="Fan-1 logo">
+                            <div class="motor_logo_text" style="width:201px;width: 89px;padding-left: 7px;margin-left: 40px;">Speed</div>
+                        </div>
+
+                        <!-- inside the div -->
+                        <div class="flexbox-item flexbox-item-1">
+
+                            <!-- first setting -->
+                            <div class="flex" style="margin-top: 29px;">
+                                <div class="all_in_t1">
+                                    <h2 class="micro_word">T100 Max speed: </h2>
+                                </div>
+                                <!-- A label for switching -->
+
+                                <div class="slider2 v4-2">
+                                <input class="range_for_slide" id="i_100" type="range" min="0" max="255" value="255">
+                            </div>
+<div class="value" id="v_100">255</div>
+                            </div>
+                            <div class="flex" style="margin-top: -2px;
+    ">
+                                <div class="all_in_t1">
+                                    <h2 class="micro_word">Pilge Max Speed: </h2>
+                                </div>
+                                <!-- A label for switching -->
+
+                                <div class="slider2 v4-2">
+                                <input class="range_for_slide v4-3" id="i_200" type="range" min="0" max="255" value="255">
+                            </div>
+                            <div class="value" id="v_200">255</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- second element in a row with one large column -->
+            <div class="flexbox-container el_2">
+
+                <!-- the title and it will overload the box -->
+
+                <div class="title-1">
+                    <img class="motor_logo fan-2" src="pictures/icons/fan-512.png" alt="Fan-2 logo">
+                    <div class="motor_logo_text rov-2-row-txt" style="margin-left: 47px;">ROV Propulsion Motor</div>
+                </div>
+
+                <!-- inside the div -->
+                <div class="flexbox-item flexbox-item-1 more_height">
+
+                    <!-- first setting -->
+
+                    <div class="first_element_00">
+                        <div class="all_1_items adjust_row_1" style="padding-top: 72px;">
+                            <div class="flex">
+                                <!-- Front Left Pilge -->
+                                <h2 class="micro_motor-t1 micro_motor-t1-1">Front Left Pilge: </h2>
+                                <div class="slider2">
+                                    <input id="s3-1" class="range_for_slide" type="range" min="-255" max="255" value="0">
+                                </div>
+                                <div id="s3-v1" class="value">0</div>
+                            </div>
+
+                            <!-- second setting  -->
+
+                            <div class="flex">
+                                <!-- Front- Right Pilge -->
+
+                                <h2 class="micro_motor-t1 v2-1 micro_motor-t1-1 ">Front- Right Pilge:</h2>
+                                <div class="slider2 v2-2">
+                                    <input id="s3-2" class="range_for_slide v2" type="range" style="margin-top: -1px;
+                        margin-left: -21px;" min="-255" max="255" value="0">
+                                </div>
+                                <div id="s3-v2" class="value v2-3" style="margin-left: -21px;">0</div>
+                            </div>
+                        </div>
+
+                        <!-- some space between the divs -->
+                        <div class="some_more_space"></div>
+                        <div class="flex">
+                            <!-- Front Left Pilge -->
+                            <h2 class="micro_motor-t1 micro_motor-t1-1">Servo base speed: </h2>
+                            <div class="slider2" style="margin-left: 40px;">
+                                <input id="s3-3" class="range_for_slide" type="range" min="-255" max="255" value="0">
+                            </div>
+                            <div id="s3-v3" class="value">0</div>
+                        </div>
+
+                        <!-- second setting  -->
+
+                        <div class="flex">
+                            <!-- Front- Right Pilge -->
+
+                            <h2 class="micro_motor-t1 v2-1 micro_motor-t1-1 ">Thruster base soeed:</h2>
+                            <div class="slider2 v2-2" style="margin-left: 37px;">
+                                <input id="s3-4" class="range_for_slide v2" type="range" style="margin-top: -1px;
+                margin-left: -21px;" min="-255" max="255" value="0">
+                            </div>
+                            <div id="s3-v4" class="value v2-3" style="margin-left: -21px;">0</div>
+                        </div>
+
+                        <!-- some space between the divs -->
+                        <div class="some_more_space"></div>
+                        <div class="flex">
+                            <!-- Front Left Pilge -->
+                            <h2 class="micro_motor-t1 micro_motor-t1-1">Front T200: </h2>
+                            <div class="slider2">
+                                <input id="s3-5" class="range_for_slide" style="margin-left: 44px;" type="range" min="-255" max="255" value="0">
+                            </div>
+                            <div id="s3-v5" class="value" style="    margin-left: 44px;">0</div>
+                        </div>
+
+                        <!-- second setting  -->
+
+                        <div class="flex">
+                            <!-- Front- Right Pilge -->
+
+                            <h2 class="micro_motor-t1 v2-1 micro_motor-t1-1 ">Back T200:</h2>
+                            <div class="slider2 v2-2" style="margin-left: 38px;">
+                                <input id="s3-6" class="range_for_slide v2" type="range" style="margin-top: -1px;
+        margin-left: 44px;" min="-255" max="255" value="0">
+                            </div>
+                            <div id="s3-v6" class="value v2-3" style="margin-left: 44px;">0</div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <div class="flexbox-container el_3">
+                <div class="title-1">
+                    <img class="motor_logo" style="height: 45px;width: 45px;" src="pictures/icons/fan.png" alt="Fan logo">
+                    <div class="motor_logo_text pigle_max_speed_edit" style="margin-left: 40px;width: 220px;">Measure
+                        fish size</div>
+                </div>
+                <div class="flexbox-item flexbox-item-1" style="width: 558px;height: 253px;/* margin-bottom: 30px; */">
+
+                    <!-- first setting -->
+
+                    <div>
+                        <div class="flex" style="align-items: self-end;">
+                            <div class="all_in_t1">
+                                <h2 class="micro_word">A: </h2>
+                            </div>
+
+                            <input type="text" id="first_n" style="color: white;border: 3px solid #a53222;padding: 5px;cursor: pointer;
+    
+    outline: 3px solid #6a190e;width: 57px;margin-left: 170px;" class="input_text">
+                            <br>
+
+                            <!-- A label for switching -->
+
+                            <div style="top: 5%;position: absolute;margin-left: 295px;border-left: 3px solid #e79a27;padding: 0px !important;height: 227px;">
+                            </div>
+
+                            <button class="start" style="margin-top: 4px !important;margin-left: 96px !important;padding: 5px;border-radius: 5%;" id="calculate">Calculate</button>
+                        </div>
+
+                        <div class="flex" style="/* margin-left: 145px; */align-items: self-end;">
+                            <div class="all_in_t1">
+                                <h2 class="micro_word">B: </h2>
+                            </div>
+
+                            <input type="text" id="second_n" style="margin-left: 170px !important;color: white;border: 3px solid #a53222;padding: 5px;cursor: pointer;margin-left: 18px;outline: 3px solid #6a190e;width: 57px;" class="input_text">
+                            <br>
+
+                            <!-- A label for switching -->
+
+
+                        </div>
+
+
+                    </div>
+
+                    <div>
+                        <div class="flex" style="align-items: self-end;">
+                            <div class="all_in_t1">
+                                <h2 class="micro_word">Average Length: </h2>
+                            </div>
+
+                            <input type="text" id="third_n" style="color: white;border: 3px solid #a53222;padding: 5px;cursor: pointer; margin-left: 18px; outline: 3px solid #6a190e;width: 57px;" class="input_text">
+                            <br>
+
+                            <!-- A label for switching -->
+
+
+                        </div>
+
+                        <div class="flex" style="align-items: self-end;">
+                            <div class="all_in_t1">
+                                <h2 class="micro_word">Number of fish: </h2>
+                            </div>
+
+                            <input type="text" id="fourth_n" style="margin-left: 27px !important;color: white;border: 3px solid #a53222;padding: 5px;cursor: pointer; margin-left: 18px; outline: 3px solid #6a190e;width: 57px;" class="input_text">
+                            <br>
+
+                            <!-- A label for switching -->
+                        </div>
+                    </div>
+                    <div id="claculated_num" style="position: absolute;color: white;font-family: 'Roboto', sans-serif;margin-top: -6%;font-size: 50px;;;;;;margin-left: 400px;">
+                        00
+                    </div>
+                </div>
+
+                <!-- Timer (Last item ) -->
+                <div class="flexbox-container">
+                    <div class="title-1">
+                        <img class="motor_logo" src="pictures/icons/clock.png" alt="Timer logo" style="margin-left: -9px;">
+                        <div class="motor_logo_text pigle_max_speed_edit edit_timer_setting">Timer</div>
+                    </div>
+                    <div class="first_stopwatch_control">
+                        <div class="flexbox-item flexbox-item-1 special_size" style="width: 558px;height: 488px;">
+                            <div class="all_elements_timer hide" id="stopwatch_1">
+                                <div class="column_timer_000 hide" id="stopwatch_2">
+                                    <span class="text_is_timer">Switch to <span id="countDown_switch" style="text-decoration:underline;text-decoration-color: #c24d2c;">Countdown</span>?</span>
+                                </div>
+                            </div>
+
+                            <div class="column_timer_00 hide" id="stopwatch_3" style="margin-left: 135px;">
+
+                                <div class="column_timer_00" style="margin-left: 32px;margin-top: 55px;">
+
+                                    <div class="stopwatch" style="margin-top: 51px;">
+                                        <h1 id="display" style="display: flex;font-family: 'Roboto', sans-serif;color: white;font-size: 50px;margin-bottom: 24px;">
+                                            00:00:00</h1>
+                                        <div style="display: flex;font-family: 'Roboto', sans-serif;color: #e79a27;font-size: 17px;margin-left: -6px;margin-top: -20px;">
+                                            <span style="margin-left: 10px;">Hours</span>
+                                            <span style="margin-left: 10px;">Minutes</span>
+                                            <span style="margin-left: 10px;">Seconds</span>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                            <div class="editing_last_items hide" id="stopwatch_4" style="margin-top: 61px;">
+                                <div class="start" id="handler" onclick="startStop()">Start</div>
+                                <div onclick="Reset()" class=" start " id="reset">Reset</div>
+                            </div>
+
+                            <!-- My stopwatch or Countdown! -->
+                            <div class="StopwatchORCountdown">
+                                <div class="content_stopwtach_or_Countdown">
+                                    <div class="clicky" id="Countdown">Countdown </div>
+                                    <br>
+                                    <div class="or">or</div>
+                                    <br>
+                                    <span class="clicky" id="stopwatch">Stopwatch</span>
+                                </div>
+                            </div>
+
+
+                            <div class="countdown hide">
+                                <!-- inputs -->
+                                <div class="column_timer_000" id="stopwatch_2">
+                                    <div class="text_is_timer">Switch to <span id="stopwatch_switch" style="text-decoration:underline;text-decoration-color: #c24d2c;">Stopwatch</span>?
+                                    </div>
+                                </div>
+                                <div class="column_timer_00 " id="stopwatch_3" style="margin-left: 169px;">
+
+                                    <div class="column_timer_00" style="background: transparent;margin-left: 49px;margin-top: -19px;">
+
+                                        <div class="stopwatch" style="margin-top: 51px;">
+                                            <h1 id="display_2" style="display: flex;font-family: 'Roboto', sans-serif;color: white;font-size: 50px;margin-bottom: 24px">
+                                                <span id="no_1">00</span>:<span id="no_2">00</span></h1>
+                                            <div style="display: flex;font-family: 'Roboto', sans-serif;color: #e79a27;font-size: 17px;margin-left: -12px;margin-top: -20px;">
+                                                <span style="margin-left: 10px;">Minutes</span>
+                                                <span style="margin-left: 10px;">Seconds</span>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                                <div class="input_management" style="margin-top: 45px;">
+                                    <div class="flex" style="justify-content: center;">
+                                        <!-- Front Left Pilge -->
+                                        <h2 class="micro_motor-t1 micro_motor-t1-1">Minutes: </h2>
+                                        <div>
+                                            <input class="range_1_value" value="15" id="s4-1" type="text" style="color: white; border: 3px solid #a53222;padding: 5px;cursor: pointer;outline: 3px solid #6a190e;
+            width: 168px;margin-left: 34px;">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="flex" style="justify-content: center;margin-top: 15px;">
+                                        <!-- Front Left Pilge -->
+                                        <h2 class="micro_motor-t1 micro_motor-t1-1">Seconds: </h2>
+                                        <input class="range_2_value" value="0" id="s4-1" type="text" style="color: white;
+    border: 3px solid #a53222;
+    padding: 5px;
+    cursor: pointer;
+    outline: 3px solid #6a190e;
+    width: 168px;
+    margin-left: 30px;">
+
+                                    </div>
+                                </div>
+
+                                <!-- start and reset -->
+                                <div class="editing_last_items " id="stopwatch_4" style="margin-top: 5px;">
+                                    <div class="start" id="handler_2">Start</div>
+                                    <div class=" start " id="reset_2">Reset</div>
+                                </div>
+
+                                <!-- end -->
+                            </div>
+
+
+                            <!-- start and reset -->
+                            <div class="editing_last_items hide" id="stopwatch_4" style="margin-top: 61px;">
+                                <div class="start" id="handler" onclick="startStop()">Start</div>
+                                <div onclick="Reset()" class=" start " id="reset">Reset</div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+        </div>
+        <div class="flexbox-container sum_add_up_for_buttons" style="margin-left: 1472px !important;">
+            <div class="flexbox-item flexbox-item-1 sum_add_up_for_buttons2" style="width: 46px;z-index: 5;height: 188px;">
+                <!-- my buttons -->
+                <button class="PID_FACTORS" id="PID_FACTORS">PID Factors</button>
+                <button class="PID_FACTORS" style="background: transparent;margin-top: 127px;border: 0px !important;" id="Buttons">Gamepad</button>
+            </div>
+        </div>
+
+        <div class="first hide" id="first_show" style="background: transparent;">
+            <div class="num_111">
+                <div class="flexbox-container  add_styles_for_PID_FACTORS " style="filter:blur(0px);background: transparent;">
+                    <div class="flexbox-item flexbox-item-1 add_styles_for_PID_FACTORS_flex_item " style="margin-top: 418px !important;">
+                        <!-- content -->
+                        <div class="title-1" style="margin-top: -29px;">
+                            <img class="motor_logo" style="height: 45px;margin-left: -19px;margin-bottom: 15px;width: 45px;" src="pictures/icons/line-graph.png" alt="Fan logo">
+                            <!-- <div class="motor_logo_text pigle_max_speed_edit" ">Pilge Max Speed</div> -->
+                            <div class="content" style="padding: 0 !important;width: 48px;color: white !important;">
+                                <h2 class="text motor_logo_text pigle_max_speed_edit PID_SOME_TEXT_EDIT " data-text="PID Factors" style="margin-left: 55px;margin-top: -9px;">
+                                    PID Factors
+                                </h2>
+                            </div>
+                        </div>
+                        <div class="first_item_PID_EDITING">
+                            <div class="all_in_t1" style="position: relative;">
+                                <h2 class="micro_word">1. P-const: </h2>
+                            </div>
+                            
+                            <!-- A label for switching -->
+
+                            <div class="container">
+                                <div class="next el1_ne0"></div>
+                                <div class="prev el1_ne1"></div>
+                                <div id="box" style="margin-top: 3px;">
+                                    <span id="el1_ne2">0</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="first_item_PID_EDITING" style="    margin: 0;">
+                            <div class="all_in_t1" style="position: relative;">
+                                <h2 class="micro_word">2. L-const: </h2>
+                            </div>
+                            <!-- A label for switching -->
+
+                            <div class="container">
+                                <div class="next el2_ne0"></div>
+                                <div class="prev el2_ne1"></div>
+                                <div id="box" style="margin-top: 3px;">
+                                    <span id="el2_ne2">0</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="first_item_PID_EDITING" style="    margin: 0;">
+                            <div class="all_in_t1" style="position: relative;">
+                                <h2 class="micro_word">3. D-const: </h2>
+                            </div>
+                            <!-- A label for switching -->
+
+                            <div class="container">
+                                <div class="next el3_ne0"></div>
+                                <div class="prev el3_ne1"></div>
+                                <div id="box" style="margin-top: 3px;">
+                                    <span id="el3_ne3">0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- second item -->
+        <!-- second item in the menu in the right of the page  -->
+        <div class="second hide" id="second_show">
+            <div class="num_222">
+                <div class="flexbox-container  add_styles_for_PID_FACTORS" >
+                    <div class="flexbox-item flexbox-item-1 add_styles_for_PID_FACTORS_flex_item " style="height: 495px;">
+                        <!-- content -->
+                        <div class="title-1" style="margin-top: -29px;">
+                            <img class="motor_logo" style="height: 45px;margin-left: -19px;margin-bottom: 15px;width: 45px;background: transparent !important;" src="pictures/icons/button.png" alt="Fan logo">
+                            <!-- <div class="motor_logo_text pigle_max_speed_edit" ">Pilge Max Speed</div> -->
+                            <div class="content" style="padding: 0 !important;width: 48px;color: white !important;">
+                                <h2 class="text motor_logo_text pigle_max_speed_edit PID_SOME_TEXT_EDIT edit_befor_after_sizes" data-text="Gamepad" style=" margin-top: -11px;width: 140px !important;
+                    margin-left: 55px;background: #212121 !important;">
+                                    Gamepad
+                                </h2>
+                            </div>
+                        </div>
+                        <!-- buttons elements in button element -- > display number and text besides it-->
+                        <!-- <h1 id="G_State">Gamepad Connected</h1> -->
+
+
+                        <!-- start of game controller settings for testing and debugging -->
+                        <!-- All axes are shown and all buttons exists too -->
+                        <!-- Running word is hidden by default  -->
+
+                        <div style="display: none;">running: <span id="running">77</span></div>
+                        <div id="gamepads" style="background: #212121;"><div style="background: #212121;margin-top: 31px;">
+                            <div style="margin-top: 211px;color: white !important;
+                            font-family: 'Roboto', sans-serif;margin-left: 130px;font-size: 23px;" class="my_show_on_off_joystick">Please connect your joystick...</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <script src="index.js"></script>
+    <script src="app.js"></script>
+
+<script>
+
+    const fudgeFactor = 2;  // because of bug in Chrome related to svg text alignment font sizes can not be < 1
+    const runningElem = document.querySelector('#running');
+    const gamepadsElem = document.querySelector('#gamepads');
+    const gamepadsByIndex = {};
+
+    const controllerTemplate = `
+<div class="Whole_element_joystick">
+  <div class="head no-1111"><div class="index"></div><div class="id"></div></div>
+  <div class="info no-1111"><div class="label">connected:</div><span class="connected"></span></div>
+  <div class="info no-1111"><div class="label">mapping:</div><span class="mapping"></span></div>
+  <div class="inputs no-1111">
+    <div class="axes no-1111"></div>
+    <div class="buttons no-1111"></div>
+  </div>
+</div>
+`;
+    const axisTemplate = `
+<svg viewBox="-2.2 -2.2 4.4 4.4" width="128" height="128">
+    <circle cx="0" cy="0" r="2" fill="none" stroke="#888" stroke-width="0.04" />
+    <path d="M0,-2L0,2M-2,0L2,0" stroke="#888" stroke-width="0.04" />
+    <circle cx="0" cy="0" r="0.22" fill="#c24d2c" class="axis" />
+    <text text-anchor="middle" fill="#CCC" x="0" y="2">0</text>
+</svg>
+`
+
+    const buttonTemplate = `
+<svg viewBox="-2.2 -2.2 4.4 4.4" width="64" height="64">
+  <circle cx="0" cy="0" r="2" fill="none" stroke="#888" stroke-width="0.1" />
+  <circle cx="0" cy="0" r="0" fill="none" fill="red" class="button" />
+  <text class="value" dominant-baseline="middle" text-anchor="middle" fill="#CCC" x="0" y="0">0.00</text>
+  <text class="index" alignment-baseline="hanging" dominant-baseline="hanging" text-anchor="start" fill="#CCC" x="-2" y="-2">0</text>
+</svg>
+`;
+
+    function addGamepad(gamepad) {
+        console.log('add:', gamepad.index);
+        const elem = document.createElement('div');
+        elem.innerHTML = controllerTemplate;
+
+        const axesElem = elem.querySelector('.axes');
+        const buttonsElem = elem.querySelector('.buttons');
+
+        const axes = [];
+        for (let ndx = 0; ndx < gamepad.axes.length; ndx += 2) {
+            const div = document.createElement('div');
+            div.innerHTML = axisTemplate;
+            axesElem.appendChild(div);
+            axes.push({
+                axis: div.querySelector('.axis'),
+                value: div.querySelector('text'),
+            });
+        }
+
+        const buttons = [];
+        for (let ndx = 0; ndx < gamepad.buttons.length; ++ndx) {
+            const div = document.createElement('div');
+            div.innerHTML = buttonTemplate;
+            buttonsElem.appendChild(div);
+            div.querySelector('.index').textContent = ndx;
+            buttons.push({
+                circle: div.querySelector('.button'),
+                value: div.querySelector('.value'),
+            });
+        }
+
+        gamepadsByIndex[gamepad.index] = {
+            gamepad,
+            elem,
+            axes,
+            buttons,
+            index: elem.querySelector('.index'),
+            id: elem.querySelector('.id'),
+            mapping: elem.querySelector('.mapping'),
+            connected: elem.querySelector('.connected'),
+        };
+        gamepadsElem.appendChild(elem);
+    }
+
+    function removeGamepad(gamepad) {
+        const info = gamepadsByIndex[gamepad.index];
+        if (info) {
+            delete gamepadsByIndex[gamepad.index];
+            info.elem.parentElement.removeChild(info.elem);
+        }
+    }
+
+    function addGamepadIfNew(gamepad) {
+        const info = gamepadsByIndex[gamepad.index];
+        if (!info) {
+            addGamepad(gamepad);
+        } else {
+            // This broke sometime in the past. It used to be
+            // the same gamepad object was returned forever.
+            // Then Chrome only changed to a new gamepad object
+            // is returned every frame.
+            info.gamepad = gamepad;
+        }
+    }
+
+    function handleConnect(e) {
+  document.querySelector(".my_show_on_off_joystick").style.display="none";
+        console.log('connect');
+        addGamepadIfNew(e.gamepad);
+    }
+
+    function handleDisconnect(e) {
+        
+  document.querySelector(".my_show_on_off_joystick").style.display="block";
+
+        console.log('disconnect');
+        removeGamepad(e.gamepad);
+    }
+
+    const t = String.fromCharCode(0x26AA);
+    const f = String.fromCharCode(0x26AB);
+    function onOff(v) {
+        return v ? t : f;
+    }
+
+    const keys = ['index', 'id', 'connected', 'mapping', /*'timestamp'*/];
+    function processController(info) {
+        const { elem, gamepad, axes, buttons } = info;
+        const lines = [`gamepad  : ${gamepad.index}`];
+        for (const key of keys) {
+            info[key].textContent = gamepad[key];
+        }
+        axes.forEach(({ axis, value }, ndx) => {
+            const off = ndx * 2;
+            axis.setAttributeNS(null, 'cx', gamepad.axes[off] * fudgeFactor);
+            axis.setAttributeNS(null, 'cy', gamepad.axes[off + 1] * fudgeFactor);
+            value.textContent = `${gamepad.axes[off].toFixed(2).padStart(5)},${gamepad.axes[off + 1].toFixed(2).padStart(5)}`;
+        });
+        buttons.forEach(({ circle, value }, ndx) => {
+            const button = gamepad.buttons[ndx];
+            circle.setAttributeNS(null, 'r', button.value * fudgeFactor);
+            circle.setAttributeNS(null, 'fill', button.pressed ? '#c24d2c' : 'gray');
+            value.textContent = `${button.value.toFixed(2)}`;
+        });
+
+        //  lines.push(`axes     : [${gamepad.axes.map((v, ndx) => `${ndx}: ${v.toFixed(2).padStart(5)}`).join(', ')} ]`);
+        //  lines.push(`buttons  : [${gamepad.buttons.map((v, ndx) => `${ndx}: ${onOff(v.pressed)} ${v.value.toFixed(2)}`).join(', ')} ]`);
+        // elem.textContent = lines.join('\n');
+    }
+
+    function addNewPads() {
+        const gamepads = navigator.getGamepads();
+        for (let i = 0; i < gamepads.length; i++) {
+            const gamepad = gamepads[i]
+            if (gamepad) {
+                addGamepadIfNew(gamepad);
+            }
+        }
+    }
+
+    window.addEventListener("gamepadconnected", handleConnect);
+    window.addEventListener("gamepaddisconnected", handleDisconnect);
+
+    function process() {
+        runningElem.textContent = ((performance.now() * 0.001 * 60 | 0) % 100).toString().padStart(2, '0');
+        addNewPads();  // some browsers add by polling, others by event
+
+        Object.values(gamepadsByIndex).forEach(processController);
+        requestAnimationFrame(process);
+    }
+    requestAnimationFrame(process);
+
+</script>
+</body></html>

@@ -13,8 +13,6 @@ let displayHours =  0;
 
 let interval = '';
 
-let displaySeconds2 = 0;
-let displayMinutes2 = 0;
 value1.textContent = slider.value;
 slider.oninput = function() {
     if(value1.textContent < 0){
@@ -171,78 +169,43 @@ slider9.oninput = function() {
     }
 }
 
-// add and subtract
+// currently not used
 
-    var box = document.getElementById('numy')
-    var next = document.querySelector('.next')
-    var prev = document.querySelector('.prev')
+// // add and subtract
 
-    box.textContent = 0;
-    next.onclick = function(){
-        box.textContent++;
-        box.style.color = "#c24d2c";
-    }
-    prev.onclick = function(){
-        box.textContent--;
-    }
+//     var box = document.getElementById('numy')
+//     var next = document.querySelector('.next')
+//     var prev = document.querySelector('.prev')
 
-//second element
+//     box.textContent = 0;
+//     next.onclick = function(){
+//         box.textContent++;
+//         box.style.color = "#c24d2c";
+//     }
+//     prev.onclick = function(){
+//         box.textContent--;
+//     }
 
-    var box2 = document.getElementById('numy2')
-    var next2 = document.querySelector('.next-1')
-    var prev2= document.querySelector('.prev-1')
+// //second element
 
-    box2.textContent = 0;
-    next2.onclick = function(){
-        box2.textContent++;
-        box2.style.color = "#c24d2c";
-    }
-    prev2.onclick = function(){
-        box2.textContent--;
-    }
+//     var box2 = document.getElementById('numy2')
+//     var next2 = document.querySelector('.next-1')
+//     var prev2= document.querySelector('.prev-1')
 
+//     box2.textContent = 0;
+//     next2.onclick = function(){
+//         box2.textContent++;
+//         box2.style.color = "#c24d2c";
+//     }
+//     prev2.onclick = function(){
+//         box2.textContent--;
+//     }
 
-// count down time
-
-const slider10 = document.querySelector("#s4-1");
-const value10 = document.querySelector("#s4-v1");
-
-value10.textContent = slider10.value;
-slider10.oninput = function() {
-    
-    if(value10.textContent<0){
-        value10.textContent = this.value;
-        value10.style.color = 'Red';
-    }else if (value10.textContent>0){
-        value10.textContent = this.value;
-        value10.style.color = 'Green';
-    }else if(value10.textContent == 0){
-        value10.textContent = this.value;
-    }
-}
-
-const slider11 = document.querySelector("#s4-2");
-const value11 = document.querySelector("#s4-v2");
-
-value11.textContent = slider11.value;
-slider11.oninput = function() {
-    
-    if(value11.textContent<0){
-        value11.textContent = this.value;
-        value11.style.color = 'Red';
-    }else if (value11.textContent>0){
-        value11.textContent = this.value;
-        value11.style.color = 'Green';
-    }else if(value11.textContent == 0){
-        value11.textContent = this.value;
-    }
-}
 
 
 // identify first-second and third show to show item when click a button (related to controls including PID Factors and that stuff)
 const PID_FACTORS = document.getElementById("PID_FACTORS");
 const Buttons = document.getElementById("Buttons");
-const Axis = document.getElementById("Axis");
 
 // items that we will make it appear when clicking on a specific buttons
 PID_FACTORS.addEventListener('click', (e)=>{
@@ -254,18 +217,14 @@ PID_FACTORS.addEventListener('click', (e)=>{
     document.getElementById("second_show").classList.remove("show");
     document.getElementById("second_show").classList.add("hide");
 
-    document.getElementById("third_show").classList.remove("show");
-    document.getElementById("third_show").classList.add("hide");
-
-    if(document.getElementById("first_show").classList.contains("show")){
-        document.querySelector(".blur_help").classList.add("blur")
+    if(document.getElementById("bluring").classList.contains("blur")){
+        document.getElementById("bluring").classList.remove("blur")
     }else{
-        document.querySelector(".blur_help").classList.remove("blur")
+        document.getElementById("bluring").classList.add("blur")
     }
 
-
-
 })
+
 
 Buttons.addEventListener('click', (e)=>{
     // show only second
@@ -275,35 +234,22 @@ Buttons.addEventListener('click', (e)=>{
     document.getElementById("second_show").classList.toggle("show");
     document.getElementById("second_show").classList.toggle("hide");
 
-    
-    document.getElementById("third_show").classList.remove("show");
-    document.getElementById("third_show").classList.add("hide");
-
+    // some blur in the background 
     if(document.getElementById("second_show").classList.contains("show")){
-        document.querySelector(".blur_help").classList.add("blur")
+        document.getElementById("bluring").classList.add("blur")
     }else{
-        document.querySelector(".blur_help").classList.remove("blur")
+        document.getElementById("bluring").classList.remove("blur")
     }
     
 })
 
-Axis.addEventListener('click', (e)=>{
-    // show only third
-    document.getElementById("first_show").classList.remove("show");
-    document.getElementById("first_show").classList.add("hide");
+// un blur the background of the GUI
 
-    document.getElementById("second_show").classList.remove("show");
-    document.getElementById("second_show").classList.add("hide");
+if(document.getElementById("first_show").classList.contains("hide") && document.getElementById("second_show").classList.contains("hide") ){
+    document.getElementById("bluring").classList.remove("blur")
+}
 
-    document.getElementById("third_show").classList.toggle("show");
-    document.getElementById("third_show").classList.toggle("hide");
 
-    if(document.getElementById("third_show").classList.contains("show")){
-        document.querySelector(".blur_help").classList.add("blur")
-    }else{
-        document.querySelector(".blur_help").classList.remove("blur")
-    }
-})
 
 // add and subtract in the PID FACTOR
 var el1_ne0 = document.querySelector('.el1_ne0')
@@ -331,19 +277,6 @@ el2_ne0.onclick = function(){
 }
 el2_ne1.onclick = function(){
     el2_ne2.textContent--;
-}
-//third element
-var el3_ne0 = document.querySelector('.el3_ne0')
-var el3_ne1 = document.querySelector('.el3_ne1')
-var el3_ne2 = document.getElementById('el3_ne2')
-
-el3_ne3.textContent = 0;
-el3_ne0.onclick = function(){
-    el3_ne3.textContent++;
-    el3_ne3.style.color = "#c24d2c";
-}
-el3_ne1.onclick = function(){
-    el3_ne3.textContent--;
 }
 
 // timer
@@ -443,35 +376,31 @@ stopwatch.addEventListener('click', ()=>{
 // Count_Down
 const start_btn = document.getElementById("handler_2");
 
-document.querySelector(".range_1").addEventListener("change",()=>{
-    if(document.querySelector(".range_1_value").textContent < 10 )
-	{
-		displayMinutes2 = '0' + document.querySelector(".range_1_value").textContent;
-	}
-	else
-	{
-		displayMinutes2 = document.querySelector(".range_1_value").textContent;
-	}
-    document.getElementById('no_1').textContent =  displayMinutes2;
-})
-
-document.querySelector(".range_2").addEventListener("change",()=>{
-    if(document.querySelector(".range_2_value").textContent < 10 )
-	{
-		displaySeconds2 = '0' + document.querySelector(".range_2_value").textContent;
-	}
-	else
-	{
-		displaySeconds2 = document.querySelector(".range_2_value").textContent;
-	}
-    
-    document.getElementById('no_2').textContent =  displaySeconds2;
-})
 
 
 // start
 start_btn.addEventListener('click', (e)=>{
-    var time = setInterval(function (){timer()}, 1000);
+    
+    let  displayMinutes2 = parseInt(document.querySelector(".range_1_value").value);
+    let displaySeconds2 = parseInt(document.querySelector(".range_2_value").value);
+    
+    var time = setInterval(function (){
+        document.querySelector(".range_1_value").style.border = "3px solid #f4fbff";
+        document.querySelector(".range_2_value").style.border = "3px solid #f4fbff";
+        displaySeconds2= displaySeconds2 -1;
+
+        if(displaySeconds2 == -1){
+            displayMinutes2--;
+            displaySeconds2= 59;
+        }
+    
+        if(displayMinutes2 == -1){
+            displaySeconds2 =0;
+            displayMinutes2= 0;
+        }
+        document.getElementById('no_1').textContent =  displayMinutes2;
+        document.getElementById('no_2').textContent =  displaySeconds2;}, 1000);
+
     document.getElementById("reset_2").addEventListener("click", ()=>{
         clearInterval(time)
         document.getElementById('no_1').textContent =  00;
@@ -479,22 +408,12 @@ start_btn.addEventListener('click', (e)=>{
         
     })
 })
-function timer(){
-    displaySeconds2= displaySeconds2 -1;
 
-    if(displaySeconds2 == -1){
-        displayMinutes2--;
-        displaySeconds2= 59;
-    }
 
-    if(displayMinutes2 == -1){
-        displaySeconds2 =0;
-        displayMinutes2= 0;
-    }
-    document.getElementById('no_1').textContent =  displayMinutes2;
-    document.getElementById('no_2').textContent =  displaySeconds2;
+// function timer(){
     
-}
+    
+// }
 
 // CountDown show
 document.getElementById("Countdown").addEventListener("click", ()=>{
@@ -512,6 +431,8 @@ document.getElementById("stopwatch_switch").addEventListener("click",()=>{
     document.getElementById("stopwatch_1").classList.add("show");
     document.getElementById("stopwatch_2").classList.add("show");
     document.getElementById("stopwatch_3").classList.add("show");
+
+
    
     document.getElementById("stopwatch_4").style.display="flex !important";
     // remove hide
@@ -536,3 +457,45 @@ document.getElementById("countDown_switch").addEventListener("click",()=>{
     document.getElementById("stopwatch_3").classList.add("hide");
     document.getElementById("stopwatch_4").classList.add("hide");
 })
+// Our calculation for the fish section
+document.getElementById("calculate").addEventListener("click", ()=>{
+    document.getElementById("claculated_num").textContent = document.getElementById("first_n").value * document.getElementById("fourth_n").value * Math.pow(document.getElementById("third_n").value, document.getElementById("second_n").value) 
+})
+
+
+
+// replacing speed + and  - with    --> Slider
+const slider100 = document.getElementById("i_100");
+const value100 = document.getElementById("v_100");
+
+value100.textContent = slider100.value;
+slider100.oninput = function() {
+    
+    if(value100.textContent<0){
+        value100.textContent = this.value;
+        value100.style.color = 'Red';
+    }else if (value100.textContent>0){
+        value100.textContent = this.value;
+        value100.style.color = 'Green';
+    }else if(value100.textContent == 0){
+        value100.textContent = this.value;
+    }
+}
+
+// second slider
+const slider200 = document.getElementById("i_200");
+const value200 = document.getElementById("v_200");
+
+value200.textContent = slider200.value;
+slider200.oninput = function() {
+    
+    if(value200.textContent<0){
+        value200.textContent = this.value;
+        value200.style.color = 'Red';
+    }else if (value200.textContent>0){
+        value200.textContent = this.value;
+        value200.style.color = 'Green';
+    }else if(value200.textContent == 0){
+        value200.textContent = this.value;
+    }
+}

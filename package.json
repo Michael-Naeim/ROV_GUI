@@ -1,0 +1,21 @@
+{
+  "name": "rov_demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "nodemon --exec electron .",
+    "electron": "ELECTRON_DISABLE_SECURITY_WARNINGS=true electron ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "18.0.4",
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "electron-context-menu": "^3.1.2"
+  }
+}

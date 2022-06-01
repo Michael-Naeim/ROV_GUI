@@ -689,3 +689,17 @@ input{
   cursor: pointer;
   color: #c0651d;
 }
+
+
+.no-1111{
+  color: white;
+  color: white !important;
+  font-family: 'Roboto', sans-serif;
+  background-color: #212121;
+}
+
+.Whole_element_joystick{
+  background-color: #212121 !important;
+  margin-top: -38px;
+
+}

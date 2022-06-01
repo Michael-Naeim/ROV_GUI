@@ -9,7 +9,7 @@ contextMenu({
 // setting up the environment as development
 
 const isDev = process.env.NODE_ENV !== 'production' ? false : true;
-let mainWindow  
+let mainWindow
 
 // size, icons and some specification for the app
 function createWindow () {
